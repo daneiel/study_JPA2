@@ -20,6 +20,6 @@ public class TesteConta {
         em.getTransaction().commit();
 
         em.close();
-        emf.close();
+        emf.close(); 
     }
 }
