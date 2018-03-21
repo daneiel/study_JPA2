@@ -11,8 +11,17 @@ public class Cliente {
     private String endereco;
     private String nome;
 
+    @JoinColumn(unique = true)
     @OneToOne
     private Conta conta;
+
+    public Conta getConta() {
+        return conta;
+    }
+
+    public void setConta(Conta conta) {
+        this.conta = conta;
+    }
 
     public Integer getId() {
         return id;
