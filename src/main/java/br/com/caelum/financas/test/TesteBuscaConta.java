@@ -1,5 +1,6 @@
-package br.com.caelum.financas.modelo;
+package br.com.caelum.financas.test;
 
+import br.com.caelum.financas.modelo.Conta;
 import br.com.caelum.financas.util.JPAUtil;
 
 import javax.persistence.EntityManager;

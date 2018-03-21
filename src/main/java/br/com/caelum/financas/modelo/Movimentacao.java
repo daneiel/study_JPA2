@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Calendar;
 import br.com.caelum.financas.modelo.Conta;
+import org.hibernate.annotations.ManyToAny;
 
 @Entity
 public class Movimentacao {
@@ -19,6 +20,7 @@ public class Movimentacao {
     private Calendar data;
     private String descricao;
 
+    @ManyToOne
     private Conta conta;
 
     public Conta getConta() {
