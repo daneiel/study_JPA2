@@ -3,6 +3,8 @@ package br.com.caelum.financas.modelo;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Calendar;
+import java.util.List;
+
 import br.com.caelum.financas.modelo.Conta;
 import org.hibernate.annotations.ManyToAny;
 
@@ -22,6 +24,17 @@ public class Movimentacao {
 
     @ManyToOne
     private Conta conta;
+
+    @ManyToMany
+    private List<Categoria> categoria;
+
+    public List<Categoria> getCategorias() {
+        return categoria;
+    }
+
+    public void setCategorias(List<Categoria> categoria) {
+        this.categoria = categoria;
+    }
 
     public Conta getConta() {
         return conta;
